@@ -1,0 +1,55 @@
+<table border="0" cellpadding="3" cellspacing="3">
+	<tr>
+		<td><app-calculator-button [name]="1" (clicked)="onAppend(1)"></app-calculator-button></td>
+		<td><app-calculator-button [name]="2" (clicked)="onAppend(2)"></app-calculator-button></td>
+		<td><app-calculator-button [name]="3" (clicked)="onAppend(3)"></app-calculator-button></td>
+		<td><app-calculator-button name="+" (clicked)="onOperation(1)"></app-calculator-button></td>
+	</tr>
+	<tr>
+		<td><app-calculator-button [name]="4" (clicked)="onAppend(4)"></app-calculator-button></td>
+		<td><app-calculator-button [name]="5" (clicked)="onAppend(5)"></app-calculator-button></td>
+		<td><app-calculator-button [name]="6" (clicked)="onAppend(6)"></app-calculator-button></td>
+		<td><app-calculator-button name="-" (clicked)="onOperation(2)"></app-calculator-button></td>
+	</tr>
+	<tr>
+		<td><app-calculator-button [name]="7" (clicked)="onAppend(7)"></app-calculator-button></td>
+		<td><app-calculator-button [name]="8" (clicked)="onAppend(8)"></app-calculator-button></td>
+		<td><app-calculator-button [name]="9" (clicked)="onAppend(9)"></app-calculator-button></td>
+		<td><app-calculator-button name="/" (clicked)="onOperation(3)"></app-calculator-button></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><app-calculator-button [name]="0" (clicked)="onAppend(0)"></app-calculator-button></td>
+		<td>&nbsp;</td>
+		<td><app-calculator-button name="*" (clicked)="onOperation(4)"></app-calculator-button></td>
+	</tr>
+	<tr>
+		<td><app-calculator-button name="=" (clicked)="onCalculate()"></app-calculator-button></td>
+		<td>&nbsp;</td>
+		<td><app-calculator-button name="C" (clicked)="onClear()"></app-calculator-button></td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<hr/>
+<table border="0" cellpadding="3" cellspacing="3">
+	<tr>
+		<td>Current term</td>
+		<td>{{this.calculatorService.TermNumber}}</td>
+	</tr>
+	<tr>
+		<td>Term 1</td>
+		<td>{{this.calculatorService.Term1}}</td>
+	</tr>
+	<tr>
+		<td>Term 2</td>
+		<td>{{this.calculatorService.Term2}}</td>
+	</tr>
+	<tr>
+		<td>Operation</td>
+		<td>{{this.calculatorService.operationStr}}</td>
+	</tr>
+	<tr>
+		<td>Result</td>
+		<td>{{this.calculatorService.result}}</td>
+	</tr>
+</table>
